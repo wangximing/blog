@@ -19,6 +19,7 @@ $('#app-table-id').on('switchChange.bootstrapSwitch', '[name="my-checkbox"]', fu
     });
 ```
 ### 解决方式
+* 在触发`switchChange`事件的时候判断一下是点击触发的还是Ajax失败回调触发的
 ```js
     var userClick = true;
     $('#app-table-id').on('switchChange.bootstrapSwitch', '[name="my-checkbox"]', function (event, state) {

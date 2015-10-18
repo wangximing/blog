@@ -4,7 +4,7 @@ tags:
 ---
 
 立即执行函数（IIFE -Immediately Invoked Function Expression）
-```
+```js
 (function() {
     'use strict';
 
