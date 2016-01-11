@@ -3,7 +3,7 @@ date: 2016-01-11 00:01:38
 tags: JavaScript Promise
 ---
 
-## 历史
+## 简介
 Promise是一个古老的**概念**（1976），又叫Deferred(延期的)，Future`java.util.concurrent.Future`。
 
 ## Promise in JavaScript
