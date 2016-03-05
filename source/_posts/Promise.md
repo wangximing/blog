@@ -3,11 +3,9 @@ date: 2016-01-11 00:01:38
 tags: JavaScript Promise
 ---
 
-## 简介
-Promise是一个古老的**概念**（1976），又叫Deferred(延期的)，Future`java.util.concurrent.Future`。
-
 ## Promise in JavaScript
 ### WHY
+ Promise是一个古老的**概念**（1976），又叫Deferred(延期的)，Future`java.util.concurrent.Future`。
  JavaScript是单线程，为了防止线程阻塞，在JS中有一种写法叫做**回调**
 
 ```javascript
@@ -27,8 +25,7 @@ Promise是一个古老的**概念**（1976），又叫Deferred(延期的)，Futu
        })
    })
 ```
-
-回调地狱存在的明显的问题 难读 也就是不优雅而且也难测。然后为了解决这些问题，降低异步编程的复杂性，开发人员一直寻找简便的方法来处理异步操作，就出现了一个概念**Promise**和Promise的一系列的实现。Promise代表了一种可能会长时间运行而且不一定必须完整的操作的结果.
+回调地狱存在的明显的问题 难读而且也难测。然后为了解决这些问题，降低异步编程的复杂性，开发人员一直寻找简便的方法来处理异步操作，就出现了一个概念**Promise**和Promise的一系列的实现。Promise代表了一种可能会长时间运行而且不一定必须完整的操作的结果.
 
 ### WHAT
 所谓Promise，字面上可以理解为"承诺"，就是说A调用B，B返回一个"承诺"给A，然后A就可以在写计划的时候这么写：当B返回结果给我的时候，A执行方案S1，反之如果B因为什么原因没有给到A想要的结果，那么A执行应急方案S2，这样一来，所有的潜在风险都在A的可控范围之内了。
@@ -146,3 +143,15 @@ Promise有三种状态
 - [jQuery的deferred对象详解 | 阮一峰](http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html)
 - [Promises/A+](https://promisesaplus.com/#point-11)
 - [回调地狱](http://callbackhell.com/)
+
+## OTHERS
+[2015前端生态发展回顾](https://github.com/kuitos/kuitos.github.io/issues/32#issuecomment-170256304)
+* 年初React Native的发布，引领React正式走上历史舞台。
+* 3月angular2.0第一个预览版发布
+* 5月 http/2.0标准正式发布，同月 iojs 与 nodejs合并。
+* 6月 ES6 和 WebAssembly 落地
+* 7月 迄今为止React生态圈影响最大的Flux实现redux发布1.0版本
+* 8月 Facebook公开了在React上应用GraphQL的relay框架的技术预览版
+* 9月 React Native for Andriod 发布
+* 11月伊始，es标准委员会宣布将历时3年研究的Object.observe从草案中移除，尽管它原本已经是stage2，几乎已经是ES7的事实标准。双十一刚一结束，阿里手淘团队发布了名为 无线电商动态化解决方案 的 Weex，也有人给了它一个更具象的名字，vue native。
+* 12月，赶在2015的尾巴，aurelia和angular2先后发布beta版。
