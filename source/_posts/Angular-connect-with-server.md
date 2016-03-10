@@ -1,3 +1,8 @@
+title: Angular Conncet with Server
+date: 2016-03-08 16:33:45
+tags:
+---
+
 ## Angular Conncet with Server
 
 Angular与服务器通过`$http`通信。$http 服务简单的封装了浏览器原生的XMLHttpRequest对象。
@@ -73,6 +78,9 @@ action的参数为`action1: {method:?, params:?, isArray:?, headers:?, ...}`
 ### Restangular
 
 是一个专门的Angular发RESTful的请求的库。
+**需要新开一篇**
+> * ETags 
+> * If-NoneMatch
 
 ### 拦截器
 如果我们要添加全局性的功能，如身份验证，错误处理的时候。就要用到拦截器。
