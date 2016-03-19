@@ -142,6 +142,8 @@ HTTPS有一个**握手流程**，在这个过程中的数据全部是明文传�
 
 ### HTTPS握手
 
+[HTTPS握手](image/https-shake-hands.png)
+
 * 客户端发出请求,请求包含
 
 	> * 支持的协议版本，比如TLS 1.0版。
