@@ -1,7 +1,8 @@
-title: JavaScript语言精粹
+title: JavaScript语言精粹（1）
 date: 2016-06-12 11:33:45
 tags: 前端
---- 
+---
+
 
 ## 语法
 
@@ -313,3 +314,66 @@ var fibonacci  = function() {
 
 JavaScript是一门基于原型的语言，着意味着对象直接从其他对象继承。
 
+### 模拟基于类的继承
+
+```
+var Person = function(firstName) {
+  this.firstName = firstName;
+};
+
+Person.prototype.walk = function(){
+  console.log("I am walking!");
+};
+
+function Student(firstName, subject) {
+  Person.call(this, firstName);
+  this.subject = subject;
+}
+
+Student.prototype = Object.create(Person.prototype);
+
+Student.prototype.constructor = Student;
+```
+
+### 函数化
+
+使用应用块模式来完成私有变量模式。
+
+### 部件
+
+
+## 数组
+
+### 数组字面量
+
+var array = [];
+var numbers = [1, 2, 3];
+
+* JS允许数组包含任意混合类型的值
+
+### 长度
+
+* length属性的值是这个数组的最大整数属性名加上1， 他不一定等于数组里属性的个数
+* 设置更大的length不会给数组分配更多的空间，而把length设小将导致下标大于等于length的属性被删除
+* 给数组追加一个值 numbers[numbers.length] = 'hello', numbers.push('hello');
+
+### 删除
+
+* 使用delete删除数组元素后会留下一个空洞 delete numbers[2],
+
+* 使用splice删除元素，numbers.splice(start, length);
+
+### 遍历
+
+### 区别数组和对象
+
+* input && typeof input === 'object' && input.constructor === Array;
+	
+	但识别从不同窗口，帧构建的数组时会失败
+* Object.prototype.toString.apply(value) === '[object Array]';//true 数组
+
+	这种方式适合各种情况
+	
+### 扩展数组方法
+
+### 指定初始值
