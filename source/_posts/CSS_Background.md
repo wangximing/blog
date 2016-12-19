@@ -3,6 +3,16 @@ date: 2016-04-29 11:33:45
 tags: CSS Background
 ---
 
+> background-image: contain 伸缩图片显示到父容器， 但**不会超出父容器**的范围，
+> 
+> background-size: cover；伸缩图片到父容器，会**充满父容器**，
+> 
+> background-clip 规定了背景渲染的范围 默认为 border+padding+content,常见例子比如border的颜色和content的背景色不同。就需要设置background-clip: content-box
+> 
+> 缩写的顺序 color-->image-->repeat-->attachment-->position
+> 
+> background: #ffffff url("img_tree.png") no-repeat right top;
+
 
 ### CSS Background
 
@@ -44,7 +54,7 @@ background-size: cover； 伸缩图片到父容器，会**充满父容器**，�
 * padding-box--图片显示的范围 padding + content
 * content-box--图片显示范围 content
  
-#### background-clip
+#### background-origin
 
 指定背景图开始的位置
 
@@ -100,6 +110,17 @@ background-size: cover； 伸缩图片到父容器，会**充满父容器**，�
  * background-origin --specifies where the background image is positioned.
 
 **这三个的分别怎么用？**
+
+* 参考 [http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html](http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html)
+* background-clip规定了border，padding等是否显示背景
+  * 若显示背景且背景存在，则显示
+  * 若不显示背景，不管背景存不存在，都不显示
+* background-origin 规定了开始绘制背景的原点
+* background-positon 规定了背景相对于background-origin的位置，center left等。
+
+总结来看就是 background-origin和background-positon规定了背景的位置。而background-clip规定了其可显示的范围
+
+
 
 
 
